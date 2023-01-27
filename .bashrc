@@ -21,7 +21,7 @@ if [[ -n "$TERRAFORM_CLOUD" ]]; then
       }
     }
   }' > ~/.terraform.d/credentials.tfrc.json
-  chmod 700 ~/.terraform.d/credentials.tfrc.json
+  chmod 600 ~/.terraform.d/credentials.tfrc.json
 fi
 
 # enable aws autocompleter if the aws binary is installed
