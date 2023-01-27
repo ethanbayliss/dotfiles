@@ -13,7 +13,7 @@ esac
 
 # import terraform cloud creds from codespace secret if it exists
 if [[ -n "$TERRAFORM_CLOUD" ]]; then
-  mkdir ~/.terraform.d/
+  mkdir -p ~/.terraform.d/
   echo '{
     "credentials": {
       "app.terraform.io": {
