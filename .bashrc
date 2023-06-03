@@ -29,6 +29,14 @@ if command -v aws_completer &> /dev/null
 then
     complete -C $(which aws_completer) aws
 fi
+
+# kubectl customizations
+if command -v kubectl &> /dev/null
+then
+    source <(kubectl completion bash)
+    alias k=kubectl
+    complete -F __start_kubectl k
+fi
 ##########################################
 
 # below has been copied from default devcontainer
